@@ -1,7 +1,4 @@
 # ------------------------------------------------------------------------
-# Modified from Meshed Memory Transformer
-# https://github.com/aimagelab/meshed-memory-transformer
-# ------------------------------------------------------------------------
 import json
 import six
 import h5py

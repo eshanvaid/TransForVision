@@ -28,7 +28,6 @@ from datasets.caption.field import TextField
 from datasets.caption.transforms import get_transform
 from engine.utils import nested_tensor_from_tensor_list
 
-
 @hydra.main(config_path="configs/caption", config_name="coco_config")
 def run_main(config: DictConfig) -> None:
     device = torch.device(f"cuda:0")
@@ -46,9 +45,8 @@ def run_main(config: DictConfig) -> None:
 
     # prepare utils
     transform = get_transform(config.dataset.transform_cfg)['valid']
-    text_field = TextField(vocab_path=config.vocab_path if 'vocab_path' in config else config.dataset.vocab_path)
+    text_field = TextField(vocab_path= config.dataset.vocab_path)
 
-    # load image
     rgb_image = Image.open(config.img_path).convert('RGB')
     image = transform(rgb_image)
     images = nested_tensor_from_tensor_list([image]).to(device)

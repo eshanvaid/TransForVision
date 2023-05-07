@@ -1,10 +1,4 @@
-# ------------------------------------------------------------------------
-# GRIT: Faster and Better Image captioning Transformer
-# Licensed under the Creative Commons Attribution.
-# ------------------------------------------------------------------------
-# Modified from Meshed Memory Transformer
-# https://github.com/aimagelab/meshed-memory-transformer
-# ------------------------------------------------------------------------
+
 
 import torch
 from models.caption.containers import Module

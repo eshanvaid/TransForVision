@@ -4,7 +4,7 @@ exp:
   rank: 0
   ngpus_per_node: 2
   world_size: 2
-  checkpoint: /home/quang/checkpoints/grit/checkpoint_caption_best_4ds.pth
+  checkpoint: /home/quang/checkpoints/TransForVision/checkpoint_caption_best_4ds.pth
   eval: False
   resume: False
 

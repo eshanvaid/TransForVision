@@ -12,13 +12,18 @@ exp:
 # https://hydra.cc/docs/patterns/select_multiple_configs_from_config_group
 defaults:
   - _self_
-  - od_dataset@dataset: [vg_train] # coco_train, objects365, openimages]
-  - od_dataset@dataset_val: [coco_val, vg_val, vg_test]
+  - datasets@dataset: [vg_train] # coco_train, objects365, openimages]
+  - datasets@dataset_val: [coco_val, vg_val, vg_test]
 
 
 dataset:
   phase: finetune
   overfit: False
+
+  transform_cfg:
+    size: [384, 640] # (h, w)
+    resize_name: maxwh # normal, minmax, maxwh; maxwh is computationally friendly for training
+    randaug: True
 
 dataset_val:
   overfit: False
@@ -32,6 +37,7 @@ model:
 
   det_module:
     reduced_dim: 512
+    d_model: 512
     dim_feedforward: 1024
     num_heads: 8
     num_layers: 6

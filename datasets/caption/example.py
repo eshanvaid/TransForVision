@@ -1,7 +1,4 @@
 # ------------------------------------------------------------------------
-# Modified from Meshed Memory Transformer
-# https://github.com/aimagelab/meshed-memory-transformer
-# ------------------------------------------------------------------------
 class Example(object):
     """Defines a single training or test example.
     Stores each column of the example as an attribute.

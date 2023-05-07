@@ -703,13 +703,7 @@ def swin_base_win7_384(pretrained=None, pos_dim=1024, **kwargs):
 
     if pretrained is not None:
         if pretrained == 'imagenet':
-            path = "pretrained_weights/swin_base_patch4_window7_384_22k.pth"
-            path = os.path.join(os.environ['HOME'], 'checkpoints/eccv', path)
-            if not os.path.exists(path):
-                torch.hub._download_url_to_file(
-                    url=
-                    "https://github.com/SwinTransformer/storage/releases/download/v1.0.0/swin_base_patch4_window12_384_22k.pth",
-                    dst=path)
+            path = "/content/drive/MyDrive/TransForVision/checkpoints/swin_base_patch4_window12_384_22k.pth"
             checkpoint = torch.load(path, map_location="cpu")
             model.load_state_dict(checkpoint["model"], strict=False)
             print('Load the backbone pretrained on ImageNet 22K')

@@ -1,7 +1,4 @@
 # ------------------------------------------------------------------------
-# Modified from Meshed Memory Transformer
-# https://github.com/aimagelab/meshed-memory-transformer
-# ------------------------------------------------------------------------
 from __future__ import unicode_literals
 from collections import defaultdict
 import logging

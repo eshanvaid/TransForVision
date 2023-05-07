@@ -1,7 +1,3 @@
-# ------------------------------------------------------------------------
-# GRIT: Faster and Better Image captioning Transformer
-# Licensed under the Creative Commons Attribution.
-# ------------------------------------------------------------------------
 import os
 import torch
 import logging

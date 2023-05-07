@@ -4,16 +4,18 @@ exp:
   rank: 0
   ngpus_per_node: 8
   world_size: 8
-  checkpoint: ''
+  checkpoint: '/content/drive/MyDrive/TransForVision/checkpoints/transforvision_checkpoint_4ds.pth'
   eval: False
   resume: False
+
+img_path: '/content/drive/MyDrive/TransForVision/notebooks/1001773457.jpg'
 
 dataset:
   overfit: False
   ann_root: '${oc.env:DATA_ROOT}/annotations'
   img_root: '${oc.env:DATA_ROOT}'
   hdf5_path: '${oc.env:DATA_ROOT}/all_splits.h5' # this is used for freezed extractor; fast to train.
-  vocab_path: '${oc.env:DATA_ROOT}/annotations/vocab.json'
+  vocab_path: '/content/drive/MyDrive/TransForVision/data/vocab.json'
   use_gri_feat: ${model.use_gri_feat}
   use_reg_feat: ${model.use_reg_feat}
 
